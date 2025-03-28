@@ -1,0 +1,98 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 30% 15%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 210 30% 15%;
+
+    --popover: 0 0% 99%;
+    --popover-foreground: 210 30% 15%;
+
+    --primary: 215 100% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 215 25% 93%;
+    --secondary-foreground: 210 30% 15%;
+
+    --muted: 215 25% 94%;
+    --muted-foreground: 215 30% 45%;
+
+    --accent: 215 25% 96%;
+    --accent-foreground: 210 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 25% 89.8%;
+    --input: 215 25% 89.8%;
+    --ring: 215 100% 25%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 30% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 30% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 30% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 215 100% 60%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 210 30% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 30% 25%;
+    --muted-foreground: 215 25% 75%;
+
+    --accent: 210 30% 25%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 30% 25%;
+    --input: 210 30% 25%;
+    --ring: 215 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom Classes */
+@layer components {
+  .glassmorphism {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+  
+  .page-transition {
+    @apply animate-fade-in;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .section-padding {
+    @apply px-4 py-8 md:px-8 md:py-12 lg:px-12 lg:py-16;
+  }
+}
